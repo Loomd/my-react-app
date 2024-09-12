@@ -52,11 +52,26 @@ header {
   outline: 2px solid var(--text-color);
 }
 
+.nav-bar button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.nav-bar button:hover, .nav-bar button:focus {
+  text-decoration: underline;
+  outline: 2px solid var(--text-color);
+}
+
 .content {
   flex-grow: 1;
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -187,4 +202,20 @@ a:hover {
     --text-color: #ffffff;
     --bg-color: #000000;
   }
+}
+
+.pgp-key {
+  background-color: #1a1a1a;
+  border: 1px solid #00ff00;
+  padding: 10px;
+  overflow-x: auto;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#contact {
+  width: 100%;
 }

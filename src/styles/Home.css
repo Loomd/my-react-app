@@ -1,0 +1,190 @@
+:root {
+  --text-color: #00ff00;
+  --bg-color: #000;
+  --nav-bg-color: #111;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.modern-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--nav-bg-color);
+  padding: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar li {
+  margin: 0 10px;
+}
+
+.nav-bar a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.nav-bar a:hover, .nav-bar a:focus {
+  text-decoration: underline;
+  outline: 2px solid var(--text-color);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 10px;
+  margin-top: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+a {
+  color: var(--text-color);
+}
+
+/* Accessibility improvements */
+a:focus {
+  outline: 2px solid var(--text-color);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    bottom: -8px;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .nav-bar.open {
+    display: block;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+  }
+
+  .nav-bar li {
+    margin: 10px 0;
+  }
+}
+
+/* Add a subtle glow effect to headings */
+h1, h2, h3 {
+  text-shadow: 0 0 5px var(--text-color);
+}
+
+/* Add a hover effect for links */
+a:hover {
+  text-shadow: 0 0 8px var(--text-color);
+}
+
+/* Add a custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
+
+/* Focus styles for keyboard navigation */
+*:focus {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --text-color: #ffffff;
+    --bg-color: #000000;
+  }
+}

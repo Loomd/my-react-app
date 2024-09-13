@@ -1,7 +1,50 @@
-.projects-container {
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.projects-content {
+  flex: 1;
+  padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  background-color: #111;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.projects-content h1 {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#about, #projects {
+  margin-bottom: 2rem;
+}
+
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#projects li {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+#projects li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projects h3 {
+  color: #007bff;
+  margin-top: 0;
 }
 
 h1, h2, h3 {

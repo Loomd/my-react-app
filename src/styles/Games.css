@@ -1,0 +1,44 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.games-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.games-content h1 {
+  color: #333;
+  border-bottom: 2px solid limegreen;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.games-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.games-list li {
+  margin-bottom: 1rem;
+}
+
+.games-list a {
+  text-decoration: none;
+  color: limegreen;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.games-list a:hover {
+  color: limegreen;
+  text-decoration: underline;
+}

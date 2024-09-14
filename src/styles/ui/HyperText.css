@@ -1,0 +1,17 @@
+/* Styles for HyperText component */
+.hyper-text {
+    color: limegreen;
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--text-color);
+  }
+  
+  .hyper-text h1 {
+    display: inline-block;
+  }
+  
+  /* Keep the glow effect for headings */
+  h1, h2, h3, .hyper-text {
+    text-shadow: 0 0 5px var(--text-color);
+  }
+  

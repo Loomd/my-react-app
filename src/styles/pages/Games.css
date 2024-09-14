@@ -15,13 +15,6 @@
   border-radius: 8px;
 }
 
-.games-content h1 {
-  color: #333;
-  border-bottom: 2px solid limegreen;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .games-list {
   list-style-type: none;
   padding: 0;

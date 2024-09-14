@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import '../styles/Minesweeper.css';
+import '../../styles/components/Minesweeper.css';
 
 const Minesweeper = () => {
   const [board, setBoard] = useState([]);

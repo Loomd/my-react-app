@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Navigation.css';
+import '../../styles/components/Navigation.css';
 
 function Navigation() {
   const [isGamesDropdownOpen, setIsGamesDropdownOpen] = useState(false);
@@ -22,6 +22,7 @@ function Navigation() {
             <ul className="dropdown-menu">
               <li><Link to="/games">All Games</Link></li>
               <li><Link to="/games/minesweeper">Minesweeper</Link></li>
+              {/* Add more game links here as needed */}
             </ul>
           )}
         </li>

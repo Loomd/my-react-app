@@ -76,11 +76,13 @@ header {
   border-radius: 8px;
 }
 
-.content h1 {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+.content h1, .content h2, .content h3 {
+  color: limegreen;
+  border-bottom: 2px solid limegreen;
   padding-bottom: 0.5rem;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 h1, h2, h3 {
@@ -91,6 +93,11 @@ h1, h2, h3 {
 
 section {
   margin-bottom: 3rem;
+  padding: 5px 10px;
+}
+
+section:hover {
+  outline: 2px solid var(--text-color);
 }
 
 ul {
@@ -172,14 +179,21 @@ a:focus {
   }
 }
 
-/* Add a subtle glow effect to headings */
-h1, h2, h3 {
+/* Styles for HyperText component */
+.hyper-text {
+  color: limegreen;
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: bold;
   text-shadow: 0 0 5px var(--text-color);
 }
 
-/* Add a hover effect for links */
-a:hover {
-  text-shadow: 0 0 8px var(--text-color);
+.hyper-text h1 {
+  display: inline-block;
+}
+
+/* Keep the glow effect for headings */
+h1, h2, h3, .hyper-text {
+  text-shadow: 0 0 5px var(--text-color);
 }
 
 /* Add a custom scrollbar */
@@ -201,8 +215,7 @@ a:hover {
 
 /* Focus styles for keyboard navigation */
 *:focus {
-  outline: 2px solid var(--text-color);
-  outline-offset: 2px;
+  outline: none;
 }
 
 /* High contrast mode */
@@ -223,4 +236,11 @@ a:hover {
 
 #contact {
   width: 100%;
+  text-align: center;
+}
+
+/* Add focus styles only for interactive elements */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--text-color);
+  outline-offset: 2px;
 }

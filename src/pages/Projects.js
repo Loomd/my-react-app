@@ -1,20 +1,21 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import '../styles/Projects.css';
+import Navigation from '../components/common/Navigation';
+import '../styles/pages/Projects.css';
+import HyperText from '../components/ui/HyperText';
 
 function Projects() {
   return (
     <div className="page-container">
       <Navigation />
       <div className="projects-content">
-        <h1>My Projects</h1>
+        <HyperText text="My Projects" />
         <main>
           <section id="about">
-            <h2>About Me</h2>
+            <HyperText text="About Me" />
             <p>I'm a developer passionate about creating elegant solutions. I specialize in full-stack development with a focus on modern web technologies.</p>
           </section>
           <section id="projects">
-            <h2>Projects</h2>
+            <HyperText text="Projects" />
             <ul>
               <li>
                 <h3>Project 1: A React-based task manager</h3>

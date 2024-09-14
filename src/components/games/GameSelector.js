@@ -1,7 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Navigation from '../common/Navigation';
 import Minesweeper from './Minesweeper';
-import Navigation from './Navigation';
+import GamesContainer from './GamesContainer';
 
 function GameSelector() {
   const { gameName } = useParams();
@@ -19,9 +20,9 @@ function GameSelector() {
   return (
     <div className="page-container">
       <Navigation />
-      <div className="game-content">
+      <GamesContainer>
         {renderGame()}
-      </div>
+      </GamesContainer>
     </div>
   );
 }

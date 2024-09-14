@@ -1,21 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import '../styles/Games.css';
+import Navigation from '../components/common/Navigation';
+import GamesContainer from '../components/games/GamesContainer';
+import '../styles/pages/Games.css';
+import HyperText from '../components/ui/HyperText';
 
 function Games() {
   return (
     <div className="page-container">
       <Navigation />
-      <div className="games-content">
-        <h1>Games</h1>
+      <GamesContainer>
+        <HyperText text="Games" />
         <ul className="games-list">
           <li>
             <Link to="/games/minesweeper">Minesweeper</Link>
           </li>
-          {/* Add more game links here as you develop them */}
+          {/* Add more game links here as i
+           develop them */}
         </ul>
-      </div>
+      </GamesContainer>
     </div>
   );
 }

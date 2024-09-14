@@ -25,10 +25,14 @@
 
 .navigation a:hover, .navigation button:hover {
   color: var(--hover-color);
+  
+  outline: 2px solid var(--text-color);
+  background-color: transparent;
 }
 
 .dropdown {
   position: relative;
+  
 }
 
 .dropdown-toggle {
@@ -53,7 +57,7 @@
 }
 
 .dropdown-menu.show {
-  display: block;
+  display: list-item;
 }
 
 .dropdown-menu li {
@@ -66,8 +70,10 @@
 }
 
 .dropdown-menu a:hover {
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  color: var(--hover-color);
+  
+  outline: 2px solid var(--text-color);
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
